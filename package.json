@@ -33,8 +33,7 @@
     "demo:dev": "webpack --watch & cross-env NODE_ENV=development demosify --serve",
     "demo": "cross-env NODE_ENV=prodution demosify",
     "demo:prod": "cross-env NODE_ENV=prodution demosify --prod",
-    "build-doc": "babel docs/src -d docs/js && ./script/build-doc.js",
-    "prepublishOnly": "npm run build-doc && npm run deploy"
+    "build-doc": "babel docs/src -d docs/js && ./script/build-doc.js"
   },
   "repository": {
     "type": "git",
