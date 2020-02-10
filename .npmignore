@@ -62,3 +62,4 @@ test/
 .demosrc.js
 .travis.yml
 lib
+.history
