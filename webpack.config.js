@@ -31,7 +31,7 @@ module.exports = function (env = {}) {
   }
 
   const alias = {
-    '@spritejs/core': '@spritejs/core/src/index.js',
+    'r2c-sprite-core': 'r2c-sprite-core/src/index.js',
     'sprite-math': 'sprite-math/src/index',
     'svg-path-to-canvas': 'svg-path-to-canvas/src/index',
     'sprite-animator': 'sprite-animator/src/index',
@@ -43,11 +43,11 @@ module.exports = function (env = {}) {
   if(env.mode === 'lite') {
     output.filename += '.lite';
     entry = './src/index.lite';
-    alias['@spritejs/core'] = '@spritejs/core/src/index.dom.js';
+    alias['r2c-sprite-core'] = 'r2c-sprite-core/src/index.dom.js';
   } else if(env.mode === 'core') {
     output.filename += '.core';
     entry = './src/index.core';
-    alias['@spritejs/core'] = '@spritejs/core/src/index.basic.js';
+    alias['r2c-sprite-core'] = 'r2c-sprite-core/src/index.basic.js';
   }
 
   if(env.production) {
