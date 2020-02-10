@@ -13,6 +13,7 @@ const _layerMap = Symbol('layerMap'),
   _snapshot = Symbol('snapshot'),
   _viewport = Symbol('viewport'),
   _resolution = Symbol('resolution'),
+  _resolutionFlexRatio = Symbol('resolutionFlexRatio'),
   _resizeHandler = Symbol('resizeHandler'),
   _attrs = Symbol('attrs'),
   _events = Symbol('events'),
@@ -50,6 +51,7 @@ export default class Scene extends BaseNode {
     this.stickExtend = !!options.stickExtend;
     this.stickOffset = [0, 0];
     this.resolution = options.resolution || [...this.viewport];
+    this.resolutionFlexRatio = options.resolutionFlexRatio || 1;
 
     this.maxDisplayRatio = options.maxDisplayRatio || Infinity;
     this.displayRatio = options.displayRatio || 1.0;
@@ -291,10 +293,10 @@ export default class Scene extends BaseNode {
       stickExtend = this.stickExtend;
 
     if(rw === 'flex') {
-      rw = 2 * vw;
+      rw = this.resolutionFlexRatio * vw;
     }
     if(rh === 'flex') {
-      rh = 2 * vh;
+      rh = this.resolutionFlexRatio * vh;
     }
 
     let width = rw,
@@ -350,6 +352,15 @@ export default class Scene extends BaseNode {
 
   get resolution() {
     return this[_resolution];
+  }
+
+  get resolutionFlexRatio() {
+    return this[_resolutionFlexRatio];
+  }
+
+  set resolutionFlexRatio(resolutionFlexRatio) {
+    this[_resolutionFlexRatio] = resolutionFlexRatio;
+    this.updateResolution();
   }
 
   setViewport(width, height) {
