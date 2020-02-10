@@ -1,13 +1,12 @@
 {
   "name": "r2c-spritejs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
   "description": "A lightweight 2D canvas rendering engine for modern browsers with ES6+.",
   "main": "dist/spritejs.min.js",
-  "module": "dist/spritejs.esm.min.js",
   "directories": {
     "example": "example"
   },
