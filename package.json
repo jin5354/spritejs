@@ -1,13 +1,13 @@
 {
-  "name": "spritejs",
+  "name": "r2c-spritejs",
   "version": "2.29.9",
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
   "description": "A lightweight 2D canvas rendering engine for modern browsers with ES6+.",
-  "main": "dist/spritejs.js",
-  "module": "dist/spritejs.esm.js",
+  "main": "dist/spritejs.min.js",
+  "module": "dist/spritejs.esm.min.js",
   "directories": {
     "example": "example"
   },
@@ -28,6 +28,7 @@
     "deploy": "npm run build",
     "compile": "rm -rf lib/* && babel src -d lib",
     "build": "npm run compile && rm -rf dist/* && ./script/build.js",
+    "build:sync": "npm run build && cp -f dist/spritejs.esm.js /Users/jin/work/React2Canvas/node_modules/spritejs/dist && cp -f dist/spritejs.esm.js /Users/jin/work/waimai_ad_fe_lingbo_game_gacha/node_modules/spritejs/dist",
     "doc": "babel docs/src -d docs/js --watch & webpack-dev-server --watch-poll --env.server=docs",
     "demo:dev": "webpack --watch & cross-env NODE_ENV=development demosify --serve",
     "demo": "cross-env NODE_ENV=prodution demosify",
