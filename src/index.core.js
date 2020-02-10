@@ -7,7 +7,7 @@ import {
   Path,
   Group,
   Color,
-} from '@spritejs/core';
+} from 'r2c-spritejs-core';
 
 import BaseSprite from './basesprite';
 import Sprite from './sprite';

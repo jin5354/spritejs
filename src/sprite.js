@@ -1,4 +1,4 @@
-import {Sprite, utils} from '@spritejs/core';
+import {Sprite, utils} from 'r2c-spritejs-core';
 import Resource from './resource';
 
 const attr = utils.attr;

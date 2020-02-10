@@ -1,4 +1,4 @@
-import {BaseSprite} from '@spritejs/core';
+import {BaseSprite} from 'r2c-spritejs-core';
 import Resource from './resource';
 
 const _loadBgImagePassport = Symbol('loadBgImagePassport');

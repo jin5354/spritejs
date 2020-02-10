@@ -1,4 +1,4 @@
-import {Layer, createNode} from '@spritejs/core';
+import {Layer, createNode} from 'r2c-spritejs-core';
 import {createCanvas} from './platform';
 
 const _resolution = Symbol('resolution');

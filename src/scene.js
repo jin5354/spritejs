@@ -1,4 +1,4 @@
-import {BaseNode, utils, querySelector, querySelectorAll} from '@spritejs/core';
+import {BaseNode, utils, querySelector, querySelectorAll} from 'r2c-spritejs-core';
 
 import Layer from './layer';
 import Resource from './resource';
